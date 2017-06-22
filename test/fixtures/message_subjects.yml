@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  messageble: one
+  messageble_type: Messageble
+  user: one
+  organization: one
+
+two:
+  title: MyString
+  messageble: two
+  messageble_type: Messageble
+  user: two
+  organization: two

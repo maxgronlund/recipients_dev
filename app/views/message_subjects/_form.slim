@@ -1,0 +1,27 @@
+= simple_form_for [@organization, @message_subject] do |form|
+  .row
+    .col-sm-6
+      = render 'shared/error_messages', errors: @message_subject.errors
+
+      = form.input :title
+      = form.hidden_field :messageble_type, value: @messageble_type
+      = form.hidden_field :messageble_id, value: @messageble_id
+      = form.simple_fields_for :message_contents do |u|
+        = u.input :content, input_html: { class: 'form-control' }
+        = u.hidden_field :user_id, value: current_user.id
+      = form.submit
+
+    .col-sm-6
+      - @families.each do |family|
+        = link_to family.name, organization_family_append_to_mail_path(@organization, family), remote: true
+        br
+
+      = form.association :message_recipients,
+        collection: @recipients,
+        include_blank: false,
+        input_html: { class: 'chosen2' },
+        label: false
+
+.recipient_ids{value=recipient_ids}
+javascript:
+  select2();

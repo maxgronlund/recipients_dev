@@ -1,0 +1,17 @@
+p#notice
+  = notice
+h1 User
+p
+  strong Name:&nbsp;
+  = @user.name
+p
+  strong Organization:&nbsp;
+  = link_to @user.oganization_name, @user.organization
+p
+  strong Family:&nbsp;
+  =link_to @user.family.name, organization_family_path(@user.family.organization, @user.family)
+
+- @messages.each do |message|
+  h4 = message.title
+  p = message.content
+  hr

@@ -1,0 +1,18 @@
+p#notice = notice
+h1
+  = @organization.name
+hr/
+h3 Families
+table
+  thead
+    tr
+      th Name
+
+  tbody
+    - @organization.families.each do |family|
+      tr
+        td = link_to family.name, organization_family_path(@organization, family)
+
+hr
+= link_to 'New message', new_organization_message_subject_path(@organization)
+

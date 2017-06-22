@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @message_subject.title %>
+</p>
+
+<p>
+  <strong>Messageble:</strong>
+  <%= @message_subject.messageble %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @message_subject.user %>
+</p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @message_subject.organization %>
+</p>
+
+<%= link_to 'Edit', edit_message_subject_path(@message_subject) %> |
+<%= link_to 'Back', message_subjects_path %>

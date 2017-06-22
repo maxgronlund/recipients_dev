@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  message_subject: one
+  reciver: one
+  reciver_type: Reciver
+  read: false
+  send_email: false
+  post_on_site: false
+  send_to_e_boks: false
+
+two:
+  message_subject: two
+  reciver: two
+  reciver_type: Reciver
+  read: false
+  send_email: false
+  post_on_site: false
+  send_to_e_boks: false

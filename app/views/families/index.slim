@@ -1,0 +1,22 @@
+p#notice = notice
+
+h1 Families
+
+table
+  thead
+    tr
+      th Organization
+      th Name
+      th
+  tbody
+    - @families.each do |family|
+      tr
+        td = family.organization.name
+        td = family.name
+        td = link_to 'Show', organization_family_path(family.organization, family)
+
+
+
+
+
+/= link_to 'New Family', new_family_path %>

@@ -1,0 +1,26 @@
+p#notice
+  = notice
+h1 Family
+p
+  strong Name:&nbsp;
+  = @family.name
+p
+  strong Organization:&nbsp;
+  = link_to @family.organization_name, @family.organization
+p
+
+h4 Family members
+table
+  thead
+    tr
+      th Name
+  tbody
+    - @family.users.each do |user|
+      tr
+        td = link_to user.name, user
+
+
+
+
+
+
